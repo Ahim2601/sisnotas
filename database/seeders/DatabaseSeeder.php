@@ -5,11 +5,13 @@ namespace Database\Seeders;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Database\Seeders\CourseSeeder;
 use Database\Seeders\StudentSeeder;
+use Database\Seeders\SubjectSeeder;
 use Illuminate\Support\Facades\Hash;
 use Database\Seeders\ProfessorSeeder;
-use Database\Seeders\SubjectSeeder;
 use Database\Seeders\InstitutionSeeder;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -26,6 +28,7 @@ class DatabaseSeeder extends Seeder
             StudentSeeder::class,
             SubjectSeeder::class,
             InstitutionSeeder::class,
+            CourseSeeder::class,
         ]);
 
 

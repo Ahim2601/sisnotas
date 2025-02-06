@@ -9,6 +9,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ProfessorController;
 use App\Http\Controllers\InstitutionController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CourseController;
 
 
 //Route::get('/', function () {
@@ -89,13 +90,21 @@ Route::middleware('auth')->group(function () {
      Route::put('/trimestres/{registrations}/update', [QuarterController::class, 'update'])->name('quarters.update');
      Route::get('/trimestres/{registrations}/delete', [QuarterController::class, 'destroy'])->name('quarters.destroy');
 
-      #tnstitucion
+      #institucion
       Route::get('/instituciones', [InstitutionController::class, 'index'])->name('institutions.index');
       Route::get('/instituciones/create', [InstitutionController::class, 'create'])->name('institutions.create');
       Route::post('/instituciones/store', [InstitutionController::class, 'store'])->name('institutions.store');
       Route::get('/instituciones/{institutions}/edit', [InstitutionController::class, 'edit'])->name('institutions.edit');
       Route::put('/instituciones/{institutions}/update', [InstitutionController::class, 'update'])->name('institutions.update');
       Route::get('/instituciones/{institutions}/delete', [InstitutionController::class, 'destroy'])->name('institutions.destroy');
+
+       #institucion
+       Route::get('/cursos', [CourseController::class, 'index'])->name('courses.index');
+       Route::get('/cursos/create', [CourseController::class, 'create'])->name('courses.create');
+       Route::post('/cursos/store', [CourseController::class, 'store'])->name('courses.store');
+       Route::get('/cursos/{courses}/edit', [CourseController::class, 'edit'])->name('courses.edit');
+       Route::put('/cursos/{courses}/update', [CourseController::class, 'update'])->name('courses.update');
+       Route::get('/cursos/{courses}/delete', [CourseController::class, 'destroy'])->name('courses.destroy');
 
 
 });

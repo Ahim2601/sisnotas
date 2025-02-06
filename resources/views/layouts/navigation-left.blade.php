@@ -63,6 +63,15 @@
                         <div data-i18n="Profesores">Profesores</div>
                     </a>
                 </li>
+                 <li class="menu-item
+                    @if (Route::currentRouteName() == 'courses.index' ||
+                        Route::currentRouteName() == 'courses.create' ||
+                        Route::currentRouteName() == 'courses.edit') active @endif"">
+                    <a href="{{ route('courses.index') }}" class="menu-link">
+                        <i class="menu-icon tf-icons ri-group-2-line"></i>
+                        <div data-i18n="Cursos">Cursos</div>
+                    </a>
+                </li>
 
                   <li class="menu-item
                     @if (Route::currentRouteName() == 'subjects.index' ||
