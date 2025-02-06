@@ -30,11 +30,6 @@
                         <div data-i18n="Dashboard">Dashboard</div>
                     </a>
                 </li>
-
-
-                <li class="menu-header mt-5">
-                    <span class="menu-header-text" data-i18n="Configuraciones">Configuraciones</span>
-                </li>
                 <li class="menu-item
                     @if (Route::currentRouteName() == 'students.index' ||
                         Route::currentRouteName() == 'students.create' ||
@@ -44,6 +39,21 @@
                         <div data-i18n="Estudiantes">Estudiantes</div>
                     </a>
                 </li>
+                 <li class="menu-item
+                    @if (Route::currentRouteName() == 'registrations.index' ||
+                        Route::currentRouteName() == 'registrations.create' ||
+                        Route::currentRouteName() == 'registrations.edit') active @endif"">
+                    <a href="{{ route('registrations.index') }}" class="menu-link">
+                        <i class="menu-icon tf-icons ri-group-2-line"></i>
+                        <div data-i18n="Inscripciones">Inscripciones</div>
+                    </a>
+                </li>
+
+
+                <li class="menu-header mt-5">
+                    <span class="menu-header-text" data-i18n="Configuraciones">Configuraciones</span>
+                </li>
+
                   <li class="menu-item
                     @if (Route::currentRouteName() == 'professors.index' ||
                         Route::currentRouteName() == 'professors.create' ||
@@ -61,6 +71,24 @@
                     <a href="{{ route('subjects.index') }}" class="menu-link">
                         <i class="menu-icon tf-icons ri-group-2-line"></i>
                         <div data-i18n="Materias">Materias</div>
+                    </a>
+                </li>
+                 <li class="menu-item
+                    @if (Route::currentRouteName() == 'quarters.index' ||
+                        Route::currentRouteName() == 'quarters.create' ||
+                        Route::currentRouteName() == 'quarters.edit') active @endif"">
+                    <a href="{{ route('quarters.index') }}" class="menu-link">
+                        <i class="menu-icon tf-icons ri-group-2-line"></i>
+                        <div data-i18n="Trimestres">Trimestres</div>
+                    </a>
+                </li>
+                 <li class="menu-item
+                    @if (Route::currentRouteName() == 'institutions.index' ||
+                        Route::currentRouteName() == 'institutions.create' ||
+                        Route::currentRouteName() == 'institutions.edit') active @endif"">
+                    <a href="{{ route('institutions.index') }}" class="menu-link">
+                        <i class="menu-icon tf-icons ri-group-2-line"></i>
+                        <div data-i18n="Institucion">Institucion</div>
                     </a>
                 </li>
                 <li class="menu-item

@@ -7,6 +7,7 @@ use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ProfessorController;
+use App\Http\Controllers\InstitutionController;
 use App\Http\Controllers\HomeController;
 
 
@@ -71,6 +72,30 @@ Route::middleware('auth')->group(function () {
      Route::get('/profesores/{professors}/edit', [ProfessorController::class, 'edit'])->name('professors.edit');
      Route::put('/profesores/{professors}/update', [ProfessorController::class, 'update'])->name('professors.update');
      Route::get('/profesores/{professors}/delete', [ProfessorController::class, 'destroy'])->name('professors.destroy');
+
+       #pinscripcion
+     Route::get('/inscripciones', [RegistrationController::class, 'index'])->name('registrations.index');
+     Route::get('/inscripciones/create', [RegistrationController::class, 'create'])->name('registrations.create');
+     Route::post('/inscripciones/store', [RegistrationController::class, 'store'])->name('registrations.store');
+     Route::get('/inscripciones/{professors}/edit', [RegistrationController::class, 'edit'])->name('registrations.edit');
+     Route::put('/inscripciones/{professors}/update', [RegistrationController::class, 'update'])->name('registrations.update');
+     Route::get('/inscripciones/{professors}/delete', [RegistrationController::class, 'destroy'])->name('registrations.destroy');
+
+       #trimestre
+     Route::get('/trimestres', [QuarterController::class, 'index'])->name('quarters.index');
+     Route::get('/trimestres/create', [QuarterController::class, 'create'])->name('quarters.create');
+     Route::post('/trimestres/store', [QuarterController::class, 'store'])->name('quarters.store');
+     Route::get('/trimestres/{registrations}/edit', [QuarterController::class, 'edit'])->name('quarters.edit');
+     Route::put('/trimestres/{registrations}/update', [QuarterController::class, 'update'])->name('quarters.update');
+     Route::get('/trimestres/{registrations}/delete', [QuarterController::class, 'destroy'])->name('quarters.destroy');
+
+      #tnstitucion
+      Route::get('/instituciones', [InstitutionController::class, 'index'])->name('institutions.index');
+      Route::get('/instituciones/create', [InstitutionController::class, 'create'])->name('institutions.create');
+      Route::post('/instituciones/store', [InstitutionController::class, 'store'])->name('institutions.store');
+      Route::get('/instituciones/{institutions}/edit', [InstitutionController::class, 'edit'])->name('institutions.edit');
+      Route::put('/instituciones/{institutions}/update', [InstitutionController::class, 'update'])->name('institutions.update');
+      Route::get('/instituciones/{institutions}/delete', [InstitutionController::class, 'destroy'])->name('institutions.destroy');
 
 
 });

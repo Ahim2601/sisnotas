@@ -8,6 +8,8 @@ use Illuminate\Database\Seeder;
 use Database\Seeders\StudentSeeder;
 use Illuminate\Support\Facades\Hash;
 use Database\Seeders\ProfessorSeeder;
+use Database\Seeders\SubjectSeeder;
+use Database\Seeders\InstitutionSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,6 +25,7 @@ class DatabaseSeeder extends Seeder
             ProfessorSeeder::class,
             StudentSeeder::class,
             SubjectSeeder::class,
+            InstitutionSeeder::class,
         ]);
 
 
