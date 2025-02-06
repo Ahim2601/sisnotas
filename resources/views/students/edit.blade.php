@@ -1,0 +1,82 @@
+@extends('layouts.app')
+
+@section('title') Estudiantes  @endsection
+
+@section('css')
+
+@endsection
+
+@section('content')
+
+<!-- start page title -->
+ <div class="container-xxl flex-grow-1 container-p-y">
+
+<!-- end page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Editar Usuario</h4>
+            </div>
+            <div class="card-body p-4">
+                <form action="{{ route('students.update', $student->id) }}" method="POST"
+                    enctype="multipart/form-data" class="needs-validation @if ($errors->any()) was-validated @endif"
+                    novalidate>
+                    @csrf
+                    @method('PUT')
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">DNI</label>
+                                <input class="form-control" type="text" name="dni" id="code" required
+                                    value="{{ $student->dni }}">
+                                @if($errors->has('dni'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('dni') }}
+                                    </div>
+                                @endif
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Nombre</label>
+                                <input class="form-control" type="text" name="name" id="name" required
+                                    value="{{ $student->name }}">
+                                @if($errors->has('name'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('name') }}
+                                    </div>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Apellido</label>
+                                <input class="form-control" type="text" name="lastname" id="lastname" required
+                                    value="{{ $student->lastname }}">
+                                @if($errors->has('lastname'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('lastname') }}
+                                    </div>
+                                @endif
+                            </div>
+                        </div>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary w-md float-end">Actualizar estudiante</button>
+                </form>
+            </div>
+         </div>
+        </div>
+    </div>
+ </div>
+@endSection
+
+@section('scripts')
+<script>
+
+</script>
+@endSection
