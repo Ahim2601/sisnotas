@@ -2,13 +2,16 @@
 @section('title', 'Iniciar Sesión')
 @section('content')
     <div class="position-relative">
-        <div class="authentication-wrapper authentication-basic container-p-y p-4 p-sm-0">
+        <div class="authentication-wrapper authentication-basic container-p-y p-4 p-sm-0"
+            style="background-image: url('{{ asset('assets/img/auth-bg.jpg') }}');
+                    background-size: cover;
+                    background-position: center">
             <div class="authentication-inner py-6">
                 <!-- Login -->
                 <div class="card p-md-7 p-1">
                     <!-- Logo -->
                     <div class="app-brand justify-content-center mt-5">
-                        <img  src="{{ asset('web/assets/images/logo.png') }}" width="80%" alt="logo" />
+                        <img  src="{{ asset('assets/img/logo.png') }}" width="80%" alt="logo" />
                     </div>
                     <!-- /Logo -->
 
@@ -59,12 +62,7 @@
                     </div>
                 </div>
                 <!-- /Login -->
-                <img
-                    alt="mask"
-                    src="{{ asset('assets/img/illustrations/auth-basic-login-mask-light.png') }}"
-                    class="authentication-image d-none d-lg-block"
-                    data-app-light-img="illustrations/auth-basic-login-mask-light.png"
-                    data-app-dark-img="illustrations/auth-basic-login-mask-dark.png" />
+
             </div>
         </div>
     </div>

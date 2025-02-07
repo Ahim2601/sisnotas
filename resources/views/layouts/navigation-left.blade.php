@@ -3,7 +3,7 @@
                 <a href="{{ route('dashboard') }}" class="app-brand-link">
                     <span class="app-brand-logo demo">
                         <span style="color: var(--bs-primary)">
-                            <img src="{{ asset('web/assets/images/logo.png') }}" width="120"  alt="" >
+                            <img src="{{ asset('assets/img/logo.png') }}" width="120"  alt="" >
                         </span>
                     </span>
                 </a>
