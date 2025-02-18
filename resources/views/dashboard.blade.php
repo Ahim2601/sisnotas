@@ -45,12 +45,32 @@
             </div>
         </div>
         <div class="col-sm-6 col-lg-3 ">
-            <div class="card card-border-shadow-warning h-100">
+            <div class="card card-border-shadow-danger h-100">
                 <div class="card-body text-center">
                     <span class="avatar-initial rounded-3 mb-2 text-center">
                         <i class="ri-file-list-3-fill ri-48px text-warning"></i>
                     </span>
                     <h5 class="mb-0 fw-bold">Tramites</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 ">
+            <div class="card card-border-shadow-danger h-100">
+                <div class="card-body text-center">
+                    <span class="avatar-initial rounded-3 mb-2 text-center">
+                        <i class="ri-book-marked-fill ri-48px text-danger"></i>
+                    </span>
+                    <h5 class="mb-0 fw-bold">Cuaderno Pedagógico</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 ">
+            <div class="card card-border-shadow-info h-100">
+                <div class="card-body text-center">
+                    <span class="avatar-initial rounded-3 mb-2 text-center">
+                        <i class="ri-git-repository-commits-fill ri-48px text-info"></i>
+                    </span>
+                    <h5 class="mb-0 fw-bold">Centralizar Notas</h5>
                 </div>
             </div>
         </div>
